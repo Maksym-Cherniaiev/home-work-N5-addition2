@@ -1,0 +1,53 @@
+.main-container {
+	width: 768px;
+	background-color: rgb(66, 67, 62);
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.main-container__get-data {
+	outline: none;
+	background-color: rgb(93, 94, 89);
+	height: 30px;
+	width: 130px;
+	border: none;
+	border-radius: 3px;
+	margin: 10px 0 10px 0;
+	color: rgb(181, 182, 176);
+	font-size: 1em;
+	font-weight: 700;
+	align-self: flex-end;
+}
+
+.main-container__get-data:active {
+	background-color: rgb(123, 124, 111);
+}
+
+.main-container__user-data-container {
+	margin: 0;
+	padding: 0;
+}
+
+.user-data__element {
+	opacity: 0;
+	width: 768px;
+	visibility: hidden;
+    height: 0;
+    background-color: rgb(134, 135, 129);
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    color: rgb(66, 67, 62);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+.user-data__element--visible {
+	visibility: visible;
+	height: 50px;
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+}

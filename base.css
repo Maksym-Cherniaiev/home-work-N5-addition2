@@ -1,0 +1,12 @@
+@import "./css/header.css";
+@import "./css/main.css";
+
+.main-wrap {
+	height: 100%;
+    width: 982px;
+    background-color: rgb(40, 41, 35);
+    margin: auto;
+    padding: 70px 40px 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
