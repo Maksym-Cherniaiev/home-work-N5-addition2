@@ -47,13 +47,13 @@ class CreatePageElements extends UserInfoParams {
 
   dataHendler(arr) {
     this.elements = arr.splice(offset, elementQuantity);
-    setTimeout(() => { this.elements.forEach(element => {
+    this.elements.forEach(element => {
       setTimeout(() => {
         this.createElementOnPage(element)
       }, this.timeInterval);
       this.timeInterval = this.timeInterval + 200;
-    }, 1000)});
     offset = offset + elementQuantity;
+    });
   }
 
   createElementOnPage(object) {
@@ -63,8 +63,12 @@ class CreatePageElements extends UserInfoParams {
 	  this.userTitle.textContent = object.title;
 	  this.userDataElement.appendChild(this.userTitle);
 	  this.userDataConteiner.appendChild(this.userDataElement);
-    this.userDataElement.getBoundingClientRect();
-	  this.userDataElement.classList.add("user-data__element--visible");
+	  this.docReflow(this.userDataElement);
+  }
+
+  docReflow(elem) {
+    elem.getBoundingClientRect();
+    elem.classList.add("user-data__element--visible");
   }
 }
 
