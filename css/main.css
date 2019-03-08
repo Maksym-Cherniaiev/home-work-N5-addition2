@@ -45,6 +45,10 @@
     margin-bottom: 10px
 }
 
+.user-data__element span {
+	margin-left: 30px;
+}
+
 .user-data__element--visible {
 	visibility: visible;
 	height: 50px;

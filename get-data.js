@@ -48,11 +48,9 @@ class CreatePageElements extends UserInfoParams {
   dataHendler(arr) {
     this.elements = arr.splice(offset, elementQuantity);
     this.elements.forEach(element => {
-      setTimeout(() => {
-        this.createElementOnPage(element)
-      }, this.timeInterval);
+      setTimeout(() => { this.createElementOnPage(element) }, this.timeInterval);
       this.timeInterval = this.timeInterval + 200;
-    offset = offset + elementQuantity;
+      offset = offset + elementQuantity;
     });
   }
 
